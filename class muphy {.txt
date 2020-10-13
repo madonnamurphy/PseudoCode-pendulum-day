@@ -1,0 +1,50 @@
+class muphy {
+    //my only inspiration, my cat 
+
+    constructor(bitties) {
+        const {yuki, johnsey, mimo} = bitties;
+        this.cat = 'Muphy';
+        this.home = 'LA';
+        this.kitten =  new Cat('Michi', [0,0,0]);
+        this.friends = [yuki, johnsey, mimo];
+        this.themeSong = songs.myOwnSong;
+        this.seeking = 'food';
+        this.route = 'hallway';  
+        this.originalDestination = 'bed';
+        
+    }
+
+    befriend(being){
+        //Muphy is not so good at making friends - very anxious but not with girls.
+        if (being == man) {
+            return muphy.runaway();
+        } else if (being == woman) {
+            return true;
+        } else if (being == kitten || being == cat) {
+            return muphy.investigate;
+        }
+    }
+
+    runaway() {
+        return muphy.originalDestination;
+    }
+
+    meow() {
+        System.out.println("Mah");
+    }
+
+    hiss() {
+        System.out.println("HHHHHEEEEEHHHH");
+    }
+
+    investigate() {
+        // Cats are so curious
+        if(being) {
+            return muphy.befriend;
+        } else if ('food') {
+            return muphy.eat;
+        } else { 
+            return muphy.runaway;
+        }
+    }
+}
